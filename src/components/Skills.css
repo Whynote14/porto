@@ -1,81 +1,52 @@
 .skills-section {
-  padding: 5rem 2rem;
-  background: var(--code-bg);
-}
-
-.skills-section .container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.skills-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: var(--text-h);
-  text-align: center;
-  position: relative;
-}
-
-.skills-section h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 2px;
+  padding: 120px 0;
+  background: var(--bg);
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 40px;
 }
 
-.skill-category {
-  background: var(--bg);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
+.skill-category-minimal {
+  padding: 30px;
+  background: var(--bg-light);
   border: 1px solid var(--border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+  transition: all 0.4s ease;
 }
 
-.skill-category:hover {
+.skill-category-minimal:hover {
+  border-color: var(--accent);
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(30, 144, 255, 0.2);
-  border-color: var(--accent-border);
 }
 
-.skill-category h3 {
-  font-size: 1.25rem;
-  color: var(--accent);
+.skill-category-minimal h3 {
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--accent-bg);
-  padding-bottom: 0.5rem;
+  color: var(--text-h);
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
 }
 
-.skill-list {
-  list-style: none;
-  padding: 0;
+.skill-tags-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 10px;
 }
 
-.skill-item {
-  background: var(--accent-bg);
-  color: var(--text-h);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
+.skill-tag-item {
+  padding: 6px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.85rem;
   font-weight: 500;
-  border: 1px solid var(--accent-border);
+  color: var(--text);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .skills-grid {
     grid-template-columns: 1fr;
   }

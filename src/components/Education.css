@@ -1,87 +1,99 @@
 .education-section {
-  padding: 5rem 2rem;
-  background: var(--bg);
-}
-
-.education-section .container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.education-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: var(--text-h);
-  text-align: center;
   position: relative;
-}
-
-.education-section h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 2px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(20, 184, 166, 0.08), transparent 22rem),
+    var(--bg-light);
 }
 
 .edu-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto 0;
 }
 
 .edu-card {
-  background: var(--code-bg);
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-  transition: transform 0.3s ease;
+  position: relative;
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px) saturate(170%);
+  -webkit-backdrop-filter: blur(18px) saturate(170%);
+  padding: 2.2rem;
+  border-radius: 8px;
+  box-shadow: var(--glass-shadow);
+  border: 1px solid var(--glass-border);
+  border-left: 5px solid var(--primary);
+  transition: var(--transition);
 }
 
 .edu-card:hover {
-  transform: translateY(-5px);
+  transform: translateX(10px);
   border-color: var(--accent-border);
+  border-left-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.edu-index {
+  color: var(--warm);
+  display: block;
+  font-family: var(--heading);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.8rem;
 }
 
 .edu-card h4 {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--text-h);
   margin-bottom: 0.5rem;
-  margin-top: 0;
+  font-family: var(--heading);
+  letter-spacing: -0.01em;
 }
 
 .edu-school {
-  font-size: 1rem;
-  color: var(--text);
+  font-size: 1.08rem;
   font-weight: 600;
+  color: var(--accent);
   margin-bottom: 0.5rem;
 }
 
 .edu-period {
-  display: inline-block;
-  font-size: 0.85rem;
-  color: var(--accent);
-  background: var(--accent-bg);
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--code-bg);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1.2rem;
+}
+
+.edu-period::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 .edu-details {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.6;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
 }
 
 @media (max-width: 768px) {
   .edu-card {
-    padding: 1.25rem;
+    padding: 1.8rem 1.5rem;
+  }
+
+  .edu-card h4 {
+    font-size: 1.2rem;
   }
 }
