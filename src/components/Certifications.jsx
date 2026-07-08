@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import './Certifications.css';
+import certAiForBusiness from '../assets/cert_ai_for_business.png';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -26,6 +27,13 @@ const cardVariants = {
 
 function Certifications() {
   const certifications = [
+    {
+      title: 'Certified Independent Study - AI For Business',
+      issuer: 'Nurul Fikri Academy',
+      date: '2026',
+      details: 'Completed the Certified Independent Study (SIB) program in AI For Business. Certificate No: 0578/S-SIB/NFA/VII/2026.',
+      link: 'https://drive.google.com/file/d/1pGKnaCiMcoJ8kcW80EZAlsAk8LBDlTDk/view?usp=sharing',
+    },
     {
       title: 'Certified Independent Study - DevOps Engineer',
       issuer: 'PT. Nurul Fikri Cipta Inovasi',

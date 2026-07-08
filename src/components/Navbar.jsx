@@ -29,6 +29,7 @@ function Navbar() {
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
   ];
 
